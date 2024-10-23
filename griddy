@@ -1,0 +1,41 @@
+#Isaac Bissonette
+#10/23/24
+
+#Import 
+
+import random
+import time
+import sys
+
+#List block
+
+fortunes = [
+    'You are a winner!',
+    'A secret admirer will soon send you a sign of affection!',
+    'The one you love is much closer than you think!',
+    'Good things will happen to you by the end of the day today!',
+    'Fame and fortune will be yours if you take the time to learn Python!',
+    'I\'m just a computer program, and have no magical powers!'
+    ]
+
+magic_colors = ['blue', 'red', 'green', 'yellow']
+
+#User input block
+
+user_name = input('please enter your first name: ')
+print(f'welcome to my Python Fortune Teller program, {user_name}')
+
+question = input('Do you want me to tell your fortune? [y/n] ')
+time.sleep(2)
+
+if question.lower() == 'y' or question.lower() == 'yes':
+    time.sleep(1)
+    color = input('Okay! To get your fortune, please input a magic color: [blue/red/green/yellow] ')
+time.sleep(1)
+
+print('getting your fortune...')
+time.sleep(2)
+print(f'here is your fortune {user_name}:')
+
+if color in magic_colors:
+    index = random.randint(0, 6)
